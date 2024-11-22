@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | NFT preview card component</title>
+  <style type="text/tailwindcss">
+    @layer utilities {
+
+    }
+  </style>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme : {
+        extend: {
+          colors: {
+            'veryDarkBlue' : '#0D192C',
+            'darkBlue' : '#15263F',
+            'blueLight' : '#2E405A',
+            'softBlue' : '#8BACD9',
+            'white' : '#fff',
+            'cyan' : '#00FFF8',
+          },
+          container: {
+            center : true,
+          },
+          screens: {
+            'xs': '375px',       // تعریف یک breakpoint جدید
+            'sm': '640px',       // تغییر مقدار پیش‌فرض sm
+            'md': '768px',
+            'lg': '1024px',
+            'xl': '1280px',
+            '2xl': '1440px',
+            '3xl': '1536px',
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="min-h-screen bg-veryDarkBlue flex justify-center items-center">
+
+  <!-- NFT preview card component  -->
+   <div class="container">
+    <!-- nft card box  -->
+     <div class="w-[327px] h-[543px] bg-blueLight">
+      <!-- card image  -->
+       <div>
+        <img src="" alt="">
+        <!-- overlay effect  -->
+        <div></div>
+        <!-- eye icon  -->
+       </div>
+       <!-- nft card informations  -->
+       <div></div>
+       <!-- nft card user profile  -->
+       <div></div>
+     </div>
+     <div class="attribution">
+       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+       Coded by <a href="#">Your Name Here</a>.
+     </div>
+   </div>
+
+</body>
+</html>
