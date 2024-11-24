@@ -55,6 +55,12 @@
           font-weight: regular;
           font-style: normal;
         }
+        .overlay:hover {
+          background-color: rgba(0, 255, 248, 0.5);
+          transition-property: all;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-duration: 300ms;
+        }
       }
     </style>
     <style>
@@ -122,8 +128,7 @@
       </symbol>
       <symbol
         id="view"
-        width="48"
-        height="48"
+        viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g fill="none" fill-rule="evenodd">
@@ -139,18 +144,22 @@
     <!-- NFT preview card component  -->
     <div class="container min-h-screen flex justify-center items-center">
       <!-- nft card box  -->
-      <div class="w-[327px] h-[543px] bg-blueLight xs:p-6 rounded-[15px]">
+      <div class="w-[327px] h-[543px] md:w-[350px] md:h-[596px] bg-blueLight xs:p-6 rounded-[15px]">
         <!-- card image  -->
-        <div class="card-img xs:w-[278px] xs:h-[278px]">
+        <div class="card-img xs:w-[278px] xs:h-[278px] md:w-[302px] md:h-[302px] relative z-10 group overflow-hidden">
           <!-- <img src="" alt="" /> -->
-          <!-- overlay effect  -->
-          <div></div>
-          <!-- eye icon  -->
+          <!-- overlay effect -->
+          <div class="overlay flex items-center justify-center absolute top-0 left-0 bottom-0 right-0 z-20 opacity-0 group-hover:opacity-100  transition-opacity duration-300 cursor-pointer">
+            <!-- eye icon -->
+            <svg width="48px" height="48px" class="">
+              <use xlink:href="#view"></use>
+            </svg>  
+          </div>
         </div>
         <!-- nft card informations  -->
         <div class="mt-6">
           <!-- nft name  -->
-           <h2 class="nft-name text-white">Equilibrium #3429</h2>
+           <h2 class="nft-name text-white"><a href="#" class="hover:text-cyan transition transition-colors">Equilibrium #3429</a></h2>
            <!-- nft caption  -->
             <span class="nft-caption text-softBlue xs:mt-3 md:mt-4 block">Our Equilibrium collection promotes balance and calm.</span>
             <!-- price and times  -->
@@ -159,7 +168,7 @@
             <div class="flex items-center gap-x-[6.48px]">
               <!-- etherium icon  -->
                <svg width="11px" height="18px">
-                <use href="#ethereum"></use>
+                <use xlink:href="#ethereum"></use>
                </svg>
                <!-- price  -->
                 <span class="price text-cyan md:text-[16px]">0.041 ETH</span>
@@ -176,7 +185,13 @@
         </div>
         <hr class="w-full h-[1px]">
         <!-- nft card user profile  -->
-        <div></div>
+        <div class="flex items-center gap-x-4 mt-4">
+          <!-- user image  -->
+           <div class="w-[33px] h-[33px] border rounded-full border-white border-w">
+            <img src="./Assets/images/image-avatar.png" alt="">
+           </div>
+           <span class="text-softBlue">Creation of <a href="" class="text-white hover:text-cyan transition-all ml-[5px]">Jules Wyvern</a></span>
+        </div>
       </div>
       <!-- developer information -->
       <!-- <div class="attribution">
